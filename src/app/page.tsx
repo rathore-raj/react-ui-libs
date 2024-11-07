@@ -3,7 +3,7 @@ import Link from "next/link";
 
 export default function Home() {
   return (
-    <main className="container mx-auto">
+    <main className="container mx-auto max-w-7xl px-4 pb-6 sm:px-6 lg:px-8">
       <div className="my-10 text-center">
         <h1 className="text-3xl font-bold tracking-tight sm:text-4xl">
           Pick the right UI Library
@@ -11,7 +11,7 @@ export default function Home() {
         <h2 className="text-lg sm:text-xl">
           for your{" "}
           <Link
-            className="text-primary-400 font-black"
+            className="font-black text-primary-400"
             href="https://react.dev/"
             target="_blank"
           >
@@ -19,7 +19,7 @@ export default function Home() {
           </Link>{" "}
           or{" "}
           <Link
-            className="text-primary-400 font-black"
+            className="font-black text-primary-400"
             href="https://nextjs.org/"
             target="_blank"
           >
@@ -29,10 +29,10 @@ export default function Home() {
         </h2>
       </div>
       <div className="flex justify-center gap-4">
-        <div className="hidden w-1/3 md:block">
-          {/* <Filters /> */}
+        <div className="hidden w-80 shrink-0 md:block">
+          <Filters />
         </div>
-        <div className="w-2/3"></div>
+        <div className="grow"></div>
       </div>
     </main>
   );
