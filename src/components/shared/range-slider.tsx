@@ -6,6 +6,7 @@ import {
 import { rangeFilters } from "@/data/filters";
 import { cn } from "@/lib/utils";
 import { Slider } from "../ui/slider";
+import Icon from "./icon";
 
 export default function RangeSlider({
   leadingLabel,
@@ -20,9 +21,9 @@ export default function RangeSlider({
     <Tooltip>
       <TooltipTrigger asChild>
         <div className={cn("flex items-center gap-3", className)}>
-          {icon}
+          <Icon name={icon} />
           <div className="w-full">
-            <p className="break-all text-xs font-medium text-primary-400 sm:text-md">
+            <p className="sm:text-md break-all text-xs font-medium text-primary-400">
               {leadingLabel} 0 {trailingLabel}
             </p>
             <Slider
